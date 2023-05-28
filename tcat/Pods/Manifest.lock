@@ -1,0 +1,16 @@
+PODS:
+  - Factory (2.1.5)
+
+DEPENDENCIES:
+  - Factory
+
+SPEC REPOS:
+  trunk:
+    - Factory
+
+SPEC CHECKSUMS:
+  Factory: a5a670cdc35c19a8c08bfaca50c8e8ff5ee7cc0d
+
+PODFILE CHECKSUM: b462d1e8ac1b417ae66ddab84124c2a60367d4eb
+
+COCOAPODS: 1.9.2

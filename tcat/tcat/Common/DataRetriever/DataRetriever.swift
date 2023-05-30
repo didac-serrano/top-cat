@@ -29,8 +29,9 @@ struct URLDataRetriever {
             }
             
             guard let d = data else { return }
+#if DEBUG
             print(String(data: d, encoding: String.Encoding.utf8)!)
-            
+#endif
             do {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 resultBlock(Result.success(json))

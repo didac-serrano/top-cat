@@ -10,14 +10,8 @@ import SwiftUI
 struct RootView: View {
     
     //MARK: - Attributes
-    let viewModel: LandingViewModel
-    
     /** navigation related */
     @State private var path: [String] = []
-    
-    init(viewModel: LandingViewModel) {
-        self.viewModel = viewModel
-    }
     
     //MARK: - Body
     var body: some View {
@@ -64,14 +58,14 @@ struct RootView: View {
             path.append("Gallery")
         }
         .font(.headline)
-        .padding(.horizontal, 48)
+        .padding(.horizontal, 36)
         .padding(.vertical, 12)
-        .background(.indigo.opacity(0.8))
+        .background(.indigo.opacity(0.6))
         .foregroundColor(.black)
         .clipShape(Capsule())
         
         .navigationDestination(for: String.self) { _ in
-            GalleryView(viewModel: viewModel, path: $path)
+            GalleryView(path: $path)
         }
     }
 }

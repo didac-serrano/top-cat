@@ -11,17 +11,16 @@ import Factory
 @main
 struct tcatApp: App {
     
-    let viewModel = LandingViewModel(service: Container.shared.searchService())
-    
     var body: some Scene {
         WindowGroup {
-            RootView(viewModel: viewModel)
+            RootView()
         }
     }
 }
 
 extension Container {
     
+    //MARK: - Services
     var searchService: Factory<SearchService> {
         Factory(self) { SearchServiceImplementation() }
     }

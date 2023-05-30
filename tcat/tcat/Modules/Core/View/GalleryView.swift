@@ -10,13 +10,12 @@ import SwiftUI
 struct GalleryView: View {
     
     //MARK: - Attributes
-    let viewModel: LandingViewModel
+    @StateObject var viewModel = GalleryViewModel()
     
     /** navigation related */
     @Binding var path: [String]
     
-    init(viewModel: LandingViewModel, path: Binding<[String]>) {
-        self.viewModel = viewModel
+    init(path: Binding<[String]>) {
         self._path = path
     }
     
@@ -47,9 +46,12 @@ struct GalleryView: View {
     
     var content: some View {
         VStack {
-            Text("gallery")
-                .font(.largeTitle)
-                .foregroundColor(.black)
+            List(viewModel.images) { item in
+                Text(item.title)
+                .onAppear {
+                    viewModel.isMoreContentNeeded(currentItem: item)
+                }
+            }
         }
     }
     
@@ -63,25 +65,5 @@ struct GalleryView: View {
                height: 64,
                alignment: .center)
         .background(.gray)
-    }
-}
-
-struct NavigationBarSetupModifier: ViewModifier {
-    
-    init() {
-        let appearance = UINavigationBarAppearance()
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
-    func body(content: Content) -> some View {
-        content
-    }
-}
-
-extension View {
-    func navigationSetup() -> some View {
-        self.modifier(NavigationBarSetupModifier())
     }
 }

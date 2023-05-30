@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2B4F40CB2A23C15A001989E6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40CA2A23C15A001989E6 /* RootView.swift */; };
-		2B4F40D52A23D3C5001989E6 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D42A23D3C5001989E6 /* LandingViewModel.swift */; };
+		2B4F40D52A23D3C5001989E6 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D42A23D3C5001989E6 /* GalleryViewModel.swift */; };
 		2B4F40D72A23EBE0001989E6 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D62A23EBE0001989E6 /* SearchService.swift */; };
 		2B4F40DA2A23EF0A001989E6 /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D92A23EF0A001989E6 /* DataRetriever.swift */; };
 		2B4F40DD2A23F996001989E6 /* APIGallerySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40DC2A23F996001989E6 /* APIGallerySearchResponse.swift */; };
 		2B4F40DF2A252596001989E6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40DE2A252596001989E6 /* GalleryView.swift */; };
+		2B4F40E22A2668FC001989E6 /* NavigationBarSetupModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40E12A2668FC001989E6 /* NavigationBarSetupModifier.swift */; };
 		2B569BB12A227E0600B1C360 /* tcatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B569BB02A227E0600B1C360 /* tcatApp.swift */; };
 		2B569BB52A227E0800B1C360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B569BB42A227E0800B1C360 /* Assets.xcassets */; };
 		2B569BB82A227E0800B1C360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B569BB72A227E0800B1C360 /* Preview Assets.xcassets */; };
@@ -21,11 +22,12 @@
 
 /* Begin PBXFileReference section */
 		2B4F40CA2A23C15A001989E6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		2B4F40D42A23D3C5001989E6 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		2B4F40D42A23D3C5001989E6 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		2B4F40D62A23EBE0001989E6 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		2B4F40D92A23EF0A001989E6 /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
 		2B4F40DC2A23F996001989E6 /* APIGallerySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGallerySearchResponse.swift; sourceTree = "<group>"; };
 		2B4F40DE2A252596001989E6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		2B4F40E12A2668FC001989E6 /* NavigationBarSetupModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetupModifier.swift; sourceTree = "<group>"; };
 		2B569BAD2A227E0600B1C360 /* tcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B569BB02A227E0600B1C360 /* tcatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcatApp.swift; sourceTree = "<group>"; };
 		2B569BB42A227E0800B1C360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,24 +52,24 @@
 		2B4F40C32A23BBBD001989E6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2B4F40CD2A23D055001989E6 /* Services */,
-				2B4F40C92A23C130001989E6 /* Landing */,
+				2B4F40C92A23C130001989E6 /* Core */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		2B4F40C92A23C130001989E6 /* Landing */ = {
+		2B4F40C92A23C130001989E6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				2B4F40D32A23D39A001989E6 /* ViewModel */,
 				2B4F40D22A23D369001989E6 /* View */,
 			);
-			path = Landing;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		2B4F40CC2A23C4EF001989E6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2B4F40E02A2668D8001989E6 /* View+Extension */,
 				2B4F40DB2A23F96B001989E6 /* Entities */,
 				2B4F40D82A23EEE5001989E6 /* DataRetriever */,
 			);
@@ -102,7 +104,7 @@
 		2B4F40D32A23D39A001989E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2B4F40D42A23D3C5001989E6 /* LandingViewModel.swift */,
+				2B4F40D42A23D3C5001989E6 /* GalleryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +123,14 @@
 				2B4F40DC2A23F996001989E6 /* APIGallerySearchResponse.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2B4F40E02A2668D8001989E6 /* View+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B4F40E12A2668FC001989E6 /* NavigationBarSetupModifier.swift */,
+			);
+			path = "View+Extension";
 			sourceTree = "<group>";
 		};
 		2B569BA42A227E0600B1C360 = {
@@ -145,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2B4F40CC2A23C4EF001989E6 /* Common */,
+				2B4F40CD2A23D055001989E6 /* Services */,
 				2B4F40C32A23BBBD001989E6 /* Modules */,
 				2B569BB02A227E0600B1C360 /* tcatApp.swift */,
 				2B569BB42A227E0800B1C360 /* Assets.xcassets */,
@@ -295,8 +306,9 @@
 				2B4F40DF2A252596001989E6 /* GalleryView.swift in Sources */,
 				2B4F40CB2A23C15A001989E6 /* RootView.swift in Sources */,
 				2B4F40D72A23EBE0001989E6 /* SearchService.swift in Sources */,
-				2B4F40D52A23D3C5001989E6 /* LandingViewModel.swift in Sources */,
+				2B4F40D52A23D3C5001989E6 /* GalleryViewModel.swift in Sources */,
 				2B569BB12A227E0600B1C360 /* tcatApp.swift in Sources */,
+				2B4F40E22A2668FC001989E6 /* NavigationBarSetupModifier.swift in Sources */,
 				2B4F40DD2A23F996001989E6 /* APIGallerySearchResponse.swift in Sources */,
 				2B4F40DA2A23EF0A001989E6 /* DataRetriever.swift in Sources */,
 			);

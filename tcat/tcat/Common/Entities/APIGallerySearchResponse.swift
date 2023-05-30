@@ -7,13 +7,18 @@
 
 import Foundation
 
-struct APIGalleryImage: Codable {
+struct APIGalleryImage: Codable, Equatable {
     
     let id: String
     let title: String
     let link: String
     let ups: Int
     let score: Int
+}
+
+struct APIGallerySearchResponse: Codable {
+    
+    let data: [APIGalleryImage]
 }
 
 /*

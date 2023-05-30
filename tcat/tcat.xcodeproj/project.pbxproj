@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B4F40CB2A23C15A001989E6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40CA2A23C15A001989E6 /* SplashView.swift */; };
+		2B4F40CB2A23C15A001989E6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40CA2A23C15A001989E6 /* RootView.swift */; };
 		2B4F40D52A23D3C5001989E6 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D42A23D3C5001989E6 /* LandingViewModel.swift */; };
 		2B4F40D72A23EBE0001989E6 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D62A23EBE0001989E6 /* SearchService.swift */; };
 		2B4F40DA2A23EF0A001989E6 /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40D92A23EF0A001989E6 /* DataRetriever.swift */; };
 		2B4F40DD2A23F996001989E6 /* APIGallerySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40DC2A23F996001989E6 /* APIGallerySearchResponse.swift */; };
+		2B4F40DF2A252596001989E6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F40DE2A252596001989E6 /* GalleryView.swift */; };
 		2B569BB12A227E0600B1C360 /* tcatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B569BB02A227E0600B1C360 /* tcatApp.swift */; };
 		2B569BB52A227E0800B1C360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B569BB42A227E0800B1C360 /* Assets.xcassets */; };
 		2B569BB82A227E0800B1C360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B569BB72A227E0800B1C360 /* Preview Assets.xcassets */; };
@@ -19,11 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B4F40CA2A23C15A001989E6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		2B4F40CA2A23C15A001989E6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		2B4F40D42A23D3C5001989E6 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		2B4F40D62A23EBE0001989E6 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		2B4F40D92A23EF0A001989E6 /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
 		2B4F40DC2A23F996001989E6 /* APIGallerySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGallerySearchResponse.swift; sourceTree = "<group>"; };
+		2B4F40DE2A252596001989E6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		2B569BAD2A227E0600B1C360 /* tcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B569BB02A227E0600B1C360 /* tcatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcatApp.swift; sourceTree = "<group>"; };
 		2B569BB42A227E0800B1C360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +93,8 @@
 		2B4F40D22A23D369001989E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B4F40CA2A23C15A001989E6 /* SplashView.swift */,
+				2B4F40CA2A23C15A001989E6 /* RootView.swift */,
+				2B4F40DE2A252596001989E6 /* GalleryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,7 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4F40CB2A23C15A001989E6 /* SplashView.swift in Sources */,
+				2B4F40DF2A252596001989E6 /* GalleryView.swift in Sources */,
+				2B4F40CB2A23C15A001989E6 /* RootView.swift in Sources */,
 				2B4F40D72A23EBE0001989E6 /* SearchService.swift in Sources */,
 				2B4F40D52A23D3C5001989E6 /* LandingViewModel.swift in Sources */,
 				2B569BB12A227E0600B1C360 /* tcatApp.swift in Sources */,

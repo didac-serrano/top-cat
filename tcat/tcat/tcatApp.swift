@@ -15,7 +15,7 @@ struct tcatApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashView(viewModel: viewModel)
+            RootView(viewModel: viewModel)
         }
     }
 }

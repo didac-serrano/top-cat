@@ -39,11 +39,8 @@ struct GalleryView: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.images, id: \.self) { image in
-                    if !(image.images?.first?.animated ?? false) {
-                        /** images not showing was due to being animated */
-                        GalleryCellView(image: image) {
-                            viewModel.isMoreContentNeeded(currentItem: image)
-                        }
+                    GalleryCellView(image: image) {
+                        viewModel.isMoreContentNeeded(currentItem: image)
                     }
                 }
             }

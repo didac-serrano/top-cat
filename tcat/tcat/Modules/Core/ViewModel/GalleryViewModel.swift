@@ -48,8 +48,10 @@ class GalleryViewModel: ObservableObject {
                 var data = images.data.sorted {
                     $0.score > $1.score
                 }
+                /** images not showing was due to being animated */
                 data = data.filter { image in
-                    image.images != nil
+                    image.images != nil &&
+                    !(image.images?.first?.animated ?? true)
                 }
 #if DEBUG
                 print(data.first?.score ?? "score error")

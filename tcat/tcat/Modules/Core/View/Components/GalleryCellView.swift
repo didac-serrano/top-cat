@@ -25,24 +25,30 @@ struct GalleryCellView: View {
     
     //MARK: - Body
     var body: some View {
-        VStack {
-            AsyncImage(url: link) { image in
-                image.resizable()
-            } placeholder: {
-                Color.indigo
-            }
-            .frame(width: 128, height: 128)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            
-            Text(image.title)
-                .frame(width: 128)
-                .onAppear {
-                    self.block()
+        ZStack(alignment: .topTrailing) {
+            VStack {
+                AsyncImage(url: link) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
                 }
-            
+                .frame(width: 128, height: 128)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                
+                Text(image.title)
+                    .frame(width: 128)
+                    .onAppear {
+                        self.block()
+                    }
+                
+                Spacer()
+            }
             Text(String(image.views))
-            Spacer()
+                .foregroundColor(.white)
+                .padding(.all, 6)
+                .background(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 4))
         }
-        .frame(height: 210)
+        .frame(height: 180)
     }
 }

@@ -58,4 +58,3 @@ struct URLDataRetriever {
         task.resume()
     }
 }
-

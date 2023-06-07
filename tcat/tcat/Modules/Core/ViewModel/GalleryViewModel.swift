@@ -45,7 +45,12 @@ class GalleryViewModel: ObservableObject {
         self.searchService.fetchImages(page: currentPage) { result in
             switch result {
             case .success(let images):
-                let data = images.data.sorted { $0.score > $1.score }
+                var data = images.data.sorted {
+                    $0.score > $1.score
+                }
+                data = data.filter { image in
+                    image.images != nil
+                }
 #if DEBUG
                 print(data.first?.score ?? "score error")
 #endif

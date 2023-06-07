@@ -22,8 +22,8 @@ struct GalleryView: View {
     //MARK: - Body
     var body: some View {
         ZStack {
-            background
             content
+            
             if viewModel.serviceError {
                 errorBanner
             }
@@ -33,23 +33,18 @@ struct GalleryView: View {
         .navigationSetup()
     }
     
-    var background: some View {
-        GeometryReader { reader in
-            LinearGradient(
-                colors: [.indigo, .pink],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing)
-            .frame(height: reader.safeAreaInsets.top, alignment: .top)
-            .ignoresSafeArea()
-        }
-    }
-    
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+
     var content: some View {
-        VStack {
-            List(viewModel.images) { item in
-                Text(item.title)
-                .onAppear {
-                    viewModel.isMoreContentNeeded(currentItem: item)
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(viewModel.images, id: \.self) { image in
+                    if !(image.images?.first?.animated ?? false) {
+                        /** images not showing was due to being animated */
+                        GalleryCellView(image: image) {
+                            viewModel.isMoreContentNeeded(currentItem: image)
+                        }
+                    }
                 }
             }
         }

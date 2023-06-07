@@ -19,11 +19,10 @@ class SearchServiceImplementation: SearchService {
     func fetchImages(page: Int, resultBlock: @escaping (Result<APIGallerySearchResponse, Error>) -> Void) {
         
         // "https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=cats"
-        let url = "https://api.imgur.com/3/gallery/search/score/%7B%7Bwindow%7D%7D/"+String(page)+"?q=cats"
+        let url = "https://api.imgur.com/3/gallery/search/%7B%7Bwindow%7D%7D/%7B%7Bwindow%7D%7D/"+String(page)+"?q=cats"
         
         dataRetriever.retrieve(url: url) { (result: Result<APIGallerySearchResponse, Error>) in
             resultBlock(result)
         }
     }
-  
 }

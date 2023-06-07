@@ -22,6 +22,7 @@ struct NavigationBarSetupModifier: ViewModifier {
 }
 
 extension View {
+    
     func navigationSetup() -> some View {
         self.modifier(NavigationBarSetupModifier())
     }

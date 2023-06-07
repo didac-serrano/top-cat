@@ -7,19 +7,47 @@
 
 import Foundation
 
-struct APIGalleryImage: Codable, Equatable, Identifiable {
+struct APIGalleryImage: Codable, Equatable, Identifiable, Hashable {
+    
+    static func == (lhs: APIGalleryImage, rhs: APIGalleryImage) -> Bool {
+        lhs.id == rhs.id
+    }
     
     let id: String
     let title: String
-    let link: String
     let views: Int
     let score: Int
+    let images: [ImageInfo]?
+    
+    /** Correct .jpg link is inside the images object */
+    struct ImageInfo: Codable, Identifiable, Hashable {
+        
+        let id: String
+        let link: String
+        let animated: Bool
+    }
 }
 
 struct APIGallerySearchResponse: Codable {
     
     let data: [APIGalleryImage]
 }
+
+/*
+{
+    "id": "Bu6wWPJ",
+    "title": "Baby bule can fly yet, lots of stray cats around, any suggestions?",
+    "views": 165,
+    "score": 19,
+    "images": [
+        {
+            "id": "xFRF13T",
+            "link": "https://i.imgur.com/xFRF13T.jpg"
+        }
+    ]
+    }
+}
+*/
 
 /*
 {
